@@ -86,6 +86,7 @@ console.log(data);
     prompt_id: 'prompt-IN4gE4yFBTi4MPlEG3GzCE4R',
     is_public: false
   }
+  ...
 ]
 ```
 
