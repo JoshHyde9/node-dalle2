@@ -1,7 +1,7 @@
 # node-dalle2
 
 # Setup
-To get access to Dalle-2's API you also need to join an waitlist and wait to be accepted which can be found here.
+To get access to Dalle-2's API you need to join the waitlist and wait to be accepted which can be found [here](https://labs.openai.com/waitlist).
 
 1. To get the your unique session key you need to go to [https://labs.openai.com/](https://labs.openai.com/).
 2. Open the Network Tab in Developer Tools in your browser.
