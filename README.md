@@ -29,11 +29,18 @@ const getDalle2Images = async (caption) => {
     return generatedImages;
 }
 
-// Call the function
-const { data } = await getDalle2Images();
+// Call the function with top level await
+const { data } = await getDalle2Images("Man in a suit riding a horse during the medieval times");
 
 // Log the response
 console.log(data);
+
+// Or use .then syntax
+getDalle2Images("Man in a suit riding a horse during the medieval times").then(
+  ({ data }) => {
+    console.log(data);
+  }
+);
 ```
 ### Output
 ```
