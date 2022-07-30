@@ -15,6 +15,10 @@
     "build": "tsc",
     "start:prod": "node ./dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshHyde9/node-dalle2.git"
+  },
   "keywords": ["dalle2", "nodejs", "node-dalle2", "openai"],
   "author": "Josh Hyde",
   "license": "ISC",
