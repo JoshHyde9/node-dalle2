@@ -15,8 +15,8 @@
     "build": "tsc",
     "start:prod": "node ./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["dalle2", "nodejs", "node-dalle2", "openai"],
+  "author": "Josh Hyde",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.6.2",
