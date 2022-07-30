@@ -36,7 +36,7 @@ const { data } = await getDalle2Images();
 console.log(data);
 ```
 ### Output
-```json
+```
 [
   {
     id: 'generation-QyXXdJP165TiSpSrzBqAo6IS',
