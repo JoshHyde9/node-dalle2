@@ -1,6 +1,6 @@
 {
   "name": "node-dalle2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Nodejs library for interacting with OpenAI's Dalle-2 AI",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
