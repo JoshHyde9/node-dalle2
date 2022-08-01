@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
+    "target": "ES2022",
+    "module": "ES2022",
     "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
     "skipLibCheck": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "outDir": "./dist",
-    "declaration": true,
     "moduleResolution": "node",
+    "declaration": true,
     "removeComments": true,
     "noImplicitAny": true,
     "strictNullChecks": true,

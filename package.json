@@ -1,6 +1,6 @@
 {
   "name": "node-dalle2",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Nodejs library for interacting with OpenAI's Dalle-2 AI",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,23 @@
     "type": "git",
     "url": "https://github.com/JoshHyde9/node-dalle2.git"
   },
-  "keywords": ["nodejs", "javascript", "typescript", "types", "openai", "openai-api", "dall-e", "dalle", "dalle2", "dalle-nodejs", "dalle2-api", "dall-e-2-api" ,"node-dalle2", "api", "node"],
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "typescript",
+    "types",
+    "openai",
+    "openai-api",
+    "dall-e",
+    "dalle",
+    "dalle2",
+    "dalle-nodejs",
+    "dalle2-api",
+    "dall-e-2-api",
+    "node-dalle2",
+    "api",
+    "node"
+  ],
   "author": "Josh Hyde",
   "license": "ISC",
   "devDependencies": {

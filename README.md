@@ -29,24 +29,55 @@ const dalle = new Dalle({ apiKey: "sess-xxxxxxxxxxxxxxxxxxxxxxxxxxxx" });
 
 // Create an async function 
 const getDalle2Images = async (caption) => {
-    const generatedImages = await dalle.generate(caption);
+  // Call the Dall-e 2 API
+  const response = await dalle.generate(caption);
 
-    return generatedImages;
+  // If Dall-e 2 couldn't generate images from the given caption
+  if (!response) {
+    console.error(
+      "Dall-e 2 couldn't generate images based upon the given caption."
+    );
+    return null;
+  }
+
+  // Get the image array from the response object
+  const { data } = response;
+
+  // Return the image array
+  return data;
+};
+```
+## Calling the function using top level await
+```js
+// Using top level await
+const data = await getDalle2Images("Man in a suit riding a horse during the medieval times");
+
+// If the image array is empty for some reason
+if (!data) {
+  console.error("Something has gone horribly wrong...");
 }
 
-// Call the function with top level await
-const { data } = await getDalle2Images("Man in a suit riding a horse during the medieval times");
-
-// Log the response
+// Log the image array 
 console.log(data);
+```
 
-// Or use .then syntax
-getDalle2Images("Man in a suit riding a horse during the medieval times").then(
-  ({ data }) => {
+## Calling the function using .then syntax 
+```js
+getDalle2Images("Man in a suit riding a horse during the medieval times")
+  .then((data) => {
+    
+    // If the image array is empty for some reason
+    if (!data) {
+      console.error("Something has gone horribly wrong...");
+      return null;
+    }
+
+    // Log the image array
     console.log(data);
   }
 );
 ```
+
 ### Output
 ```
 [

@@ -25,20 +25,22 @@ export interface Task {
   };
 }
 
+export interface IData {
+  id: string;
+  object: string;
+  created: number;
+  generation_type: string;
+  generation: { image_path: string };
+  task_id: string;
+  prompt_id: string;
+  is_public: boolean;
+}
+
+export type ImageData = IData[];
+
 export interface ImageGenerations {
   object: string;
-  data: [
-    {
-      id: string;
-      object: string;
-      created: number;
-      generation_type: string;
-      generation: { image_path: string };
-      task_id: string;
-      prompt_id: string;
-      is_public: boolean;
-    }
-  ];
+  data: ImageData;
 }
 
 export class Dalle {
@@ -55,7 +57,7 @@ export class Dalle {
       prompt: { caption: prompt, batch_size: 4 },
     };
 
-    return new Promise<ImageGenerations>(async (resolve, _) => {
+    return new Promise<ImageGenerations | null>(async (resolve, reject) => {
       const response = await fetch(this.url, {
         method: "POST",
         headers: {
@@ -67,7 +69,9 @@ export class Dalle {
 
       if (!response.ok) {
         console.error(response);
-        return;
+        return reject(
+          "Dall-e 2 couldn't generate images based upon your caption."
+        );
       }
 
       const data: Task = await response.json();
@@ -84,7 +88,9 @@ export class Dalle {
 
         if (!response.ok) {
           console.error(response);
-          return;
+          return reject(
+            "Dall-e 2 couldn't generate images based upon your caption."
+          );
         }
 
         const data: Task = await response.json();
