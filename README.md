@@ -74,8 +74,11 @@ getDalle2Images("Man in a suit riding a horse during the medieval times")
 
     // Log the image array
     console.log(data);
-  }
-);
+  })
+  // Log the error if one occurs
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ### Output
